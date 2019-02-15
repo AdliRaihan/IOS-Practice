@@ -8,41 +8,25 @@
 
 import UIKit
 
-struct popular : Decodable{
-    let success:Bool
-    let elapsedMS:Int
-    let warning:String?
-    let result:[result]
-}
-struct result : Decodable {
-    let generatorID:Int?
-    let imageID:Int?
-    let displayName:String?
-    let urlName:String?
-    let totalVotesScore:Int?
-    let instancesCount:Int?
-    let ranking:Int?
-    let imageUrl:String?
-
-}
-
-struct entityVotesSummary : Decodable {
-    let entityName:String?
-    let entityID:Int?
-    let totalVotesSum:Int?
-    let userID:Int?
-    let userVoteScore:Int?
-}
-
 class ViewController: UIViewController {
 
+
+    @IBOutlet weak var imageViewTestAutoLayouting : UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        imageViewTestAutoLayouting.sd_setImage(with:
+            URL(string: "https://images.unsplash.com/photo-1548371836-9f0b75a62d8a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"),
+                                               completed: nil)
+        imageViewTestAutoLayouting.contentMode = UIViewContentMode.scaleAspectFill
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()        // Dispose of any resources that can be recreated.
+
+
+
     }
 
     /*

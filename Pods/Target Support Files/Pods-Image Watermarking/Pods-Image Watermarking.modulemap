@@ -1,0 +1,6 @@
+framework module Pods_Image_Watermarking {
+  umbrella header "Pods-Image Watermarking-umbrella.h"
+
+  export *
+  module * { export * }
+}
